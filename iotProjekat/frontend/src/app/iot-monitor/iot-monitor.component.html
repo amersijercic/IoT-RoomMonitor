@@ -1,0 +1,46 @@
+<div class="container">
+  <header class="header">
+    <h1>Pametni Sobni Monitor</h1>
+  </header>
+
+  <main class="main-content">
+    <div class="monitor-card">
+
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-icon">🌡️</div>
+          <div class="metric-value">{{ sensorData.temperature }}°C</div>
+          <div class="metric-label">Temperature</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon">💧</div>
+          <div class="metric-value">{{ sensorData.humidity }}%</div>
+          <div class="metric-label">Humidity</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon">☁️</div>
+          <div class="metric-value">{{ sensorData.gas }} ppm</div>
+          <div class="metric-label">Gas Level</div>
+          <div class="gas-limit-badge">Limit: {{ sensorData.gasLimit }}</div>
+        </div>
+      </div>
+
+      <div class="system-controls">
+        <h3>Sistemske kontrole</h3>
+        <div class="control-group">
+          <label for="gasThreshold">Gas Limit Alert</label>
+          <div class="input-group">
+            <input type="number" id="gasThreshold" [(ngModel)]="gasThreshold" class="threshold-input" />
+            <button (click)="updateThreshold()" class="update-button">
+              Update Limit
+            </button>
+            <!-- <button (click)="blinkLED()">Blink LED</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "backend.Controllers.SensorController",
+    "Method": "GetSensorData",
+    "RelativePath": "api/Sensor/data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend.Controllers.SensorController",
+    "Method": "UpdateGasLimit",
+    "RelativePath": "api/Sensor/gaslimit",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "update",
+        "Type": "backend.Models.GasLimitUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestController",
+    "Method": "AddTestData",
+    "RelativePath": "Test/add",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
